@@ -18,7 +18,9 @@ public class t_1 {
         // 分别调用sleep()、eat()、study()、speak()方法
         /********* begin *********/
         PingPangPlayer ppp = new PingPangPlayer();
-        ppp.PingPangPlayer(pppName,pppAge);
+        ppp.setName(pppName);
+        ppp.setAge(pppAge);
+        ppp.PingPangPlayer(ppp.getName(),ppp.getAge());
         ppp.sleep();
         ppp.eat();
         ppp.study();
@@ -80,15 +82,27 @@ interface SpeakEnglish {
 // 抽象方法eat()（吃的不一样）
 abstract class Person {
     /********* begin *********/
-    String name;
-    int age;
+    private String name;
+    private int age;
+    public void setAge(int age){
+        this.age = age;
+    }
+    public int getAge(){
+        return this.age = age;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return this.name = name;
+    }
     public void Person(){
 
     }
     public void Person(String name,int age){
         this.name = name;
         this.age = age;
-        System.out.println(name+"---"+age);
+        System.out.println(getName()+"---"+getAge());
     }
     public void sleep(){
         System.out.println("人都是要睡觉的");
@@ -103,13 +117,13 @@ abstract class Person {
 // 运动员学习内容不一样，抽取为抽象 定义抽象方法study()
 abstract class Player extends Person {
     /********* begin *********/
+
     public void Player(){
 
     }
     public void Player(String name , int age){
-        this.name = name;
-        this.age = age;
-        System.out.println(name+"---"+age);
+
+        System.out.println(getName()+"---"+getAge());
     }
     abstract void study();
     /********* end *********/
@@ -120,6 +134,8 @@ abstract class Player extends Person {
 // 有参构造函数初始化name和age
 // 教练教的不一样 定义抽象方法teach()
 abstract class Coach extends Person {
+    String name;
+    int age;
     /********* begin *********/
     public void Coach(){
 
@@ -140,6 +156,8 @@ abstract class Coach extends Person {
 // 实现自己的study()方法 输出'乒乓球运动员学习如何发球和接球'
 // 实现自己的speak()方法 输出'乒乓球运动员说英语'
 class PingPangPlayer extends Player implements SpeakEnglish {
+    String name;
+    int age;
     /********* begin *********/
     public void PingPangPlayer(){
 
@@ -168,6 +186,8 @@ class PingPangPlayer extends Player implements SpeakEnglish {
 // 实现自己的eat()方法 输出'篮球运动员吃牛肉，喝牛奶'
 // 实现自己的study()方法 输出'篮球运动员学习如何运球和投篮'
 class BasketballPlayer extends Player {
+    String name;
+    int age;
     /********* begin *********/
     public void BasketballPlayer(){
 
