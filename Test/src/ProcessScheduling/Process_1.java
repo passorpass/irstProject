@@ -23,7 +23,7 @@ public class Process_1 {
         }
 
          */
-       /*
+
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         sc.close();
@@ -38,7 +38,7 @@ public class Process_1 {
             e.printStackTrace();
         }
 
-        */
+        /*
         Scanner sc = new Scanner(System.in);
         int count  = sc.nextInt();
         sc.close();
@@ -51,6 +51,8 @@ public class Process_1 {
         }catch (Exception e){
             e.printStackTrace();
         }
+
+         */
 
 
     }
@@ -66,7 +68,7 @@ public class Process_1 {
 }
 
  */
-/*
+
 class ThreadCallable implements Callable<Integer>{
     int num ;
     ThreadCallable(int num) {
@@ -89,8 +91,8 @@ class ThreadCallable implements Callable<Integer>{
     }
 }
 
- */
-class CallThreadable implements Callable<Integer>{
+
+/*class CallThreadable implements Callable<Integer>{
     int count ;
     CallThreadable(int count){
         this.count = count;
@@ -118,3 +120,4 @@ class CallThreadable implements Callable<Integer>{
     }
     }
 
+*/

@@ -56,7 +56,7 @@ public class work_01 {
         if (!find.equals(n1)&&!find.equals(n2)&&!find.equals(n3)){
             System.out.println("输入书名的编号不存在");
         }
-
+        sc.close();
 
 
         /*
