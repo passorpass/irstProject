@@ -31,32 +31,24 @@ public class work_01 {
         System.out.println("书名：mysql大全      编号：11235");
         System.out.println("输入对应编号查看详细内容");
         Scanner sc = new Scanner(System.in);
-        Book book = new Book();
-        Book[] books = new Book[3];
-        books[0] = new Book("java大全", 325, 45);
-        books[1] = new Book("python大全", 600, 80);
-        books[2] = new Book("mysql大全", 521, 102);
 
-        books[0].counts(12138);
-        books[1].counts(12148);
-        books[2].counts(11235);
-        Integer n1 = books[0].counts(12138);
-        Integer n2 = books[1].counts(12148);
-        Integer n3 = books[2].counts(11235);
-        Integer find = sc.nextInt();
-        if(find.equals(n1)){
-            System.out.println(books[0]);
+        Book[] books = {
+                new Book(12138,"java大全 ",8001,45),
+                new Book(12148,"python大全 ",3564,83),
+                new Book(11235,"mysql大全 ",7812,88),
+
+        };
+        int id_book = Integer.parseInt(sc.next());
+        for(Book book : books){
+            if(id_book == book.getCounts()){
+                System.out.println(book);
+                return;
+            }
+
+
         }
-        if(find.equals(n2)){
-            System.out.println(books[1]);
-        }
-        if(find.equals(n3)){
-            System.out.println(books[2]);
-        }
-        if (!find.equals(n1)&&!find.equals(n2)&&!find.equals(n3)){
-            System.out.println("输入书名的编号不存在");
-        }
-        sc.close();
+        System.out.println("No Find Book");
+
 
 
         /*
@@ -172,29 +164,27 @@ class Book {
 
     @Override
     public String toString() {
-        return
-                "编号=" + counts +
-                ", 书名='" + name_book + '\'' +
-                ", 页码=" + number_book +
-                ", 价钱=" + worth_book +"\n";
-
+        return "Book{" +
+                "counts=" + counts +
+                ", name_book='" + name_book + '\'' +
+                ", number_book=" + number_book +
+                ", worth_book=" + worth_book +
+                '}';
     }
 
     public Book(){
 
     }
-    public Book(String name_book,int number_book,int worth_book){
-
+    public Book(int counts ,String name_book,int number_book,int worth_book){
+    this.counts=counts;
     this.name_book=name_book;
     this.number_book=number_book;
     this.worth_book=worth_book;
 
     }
-    public int counts(int counts){
-
-        return this.counts = counts;
-    }
-
 
     }
+
+
+
 
