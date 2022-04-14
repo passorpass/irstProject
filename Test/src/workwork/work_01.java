@@ -48,7 +48,7 @@ public class work_01 {
 
         }
         System.out.println("No Find Book");
-
+        sc.close();
 
 
         /*
