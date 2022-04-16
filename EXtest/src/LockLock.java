@@ -1,46 +1,61 @@
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.lang.Thread;
 public class LockLock {
+    private ArrayList<Integer> arrayList = new ArrayList<>();
+    private Lock lock = new ReentrantLock();
+    private int num = 0 ;
     public static void main(String[] args) {
+        final LockLock lock = new LockLock();
 
-        final Insert_3 insert3 = new Insert_3();
-        Thread t1 = new Thread(new Runnable(){
+        new Thread(){
             public void run(){
-                insert3.insert(Thread.currentThread());
-            }
-        });
-        Thread t2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                insert3.insert(Thread.currentThread());
-            }
-        });
-        Thread t3 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                insert3.insert(Thread.currentThread());
-            }
-        });
 
-        t1.setPriority(Thread.MAX_PRIORITY);
-        t2.setPriority(Thread.NORM_PRIORITY);
-        t3.setPriority(Thread.MIN_PRIORITY);
-
-        t1.start();
-        t2.start();
-        t3.start();
+                lock.Insert_3(Thread.currentThread());
+            };
+        }.start();
+        new Thread(){
+        public void run(){
+            lock.Insert_3(Thread.currentThread());
+        };
+        }.start();
+        new Thread(){
+            public void run(){
+                lock.Insert_3(Thread.currentThread());
+            };
+        }.start();
     }
-}
-class Insert_3{
-    public static int num ;
 
-    public void insert(Thread thread){
 
-        for(int i = 0 ; i < 5 ; i++){
-            num++;
-            System.out.println(num);
+
+
+
+public void Insert_3(Thread thread){
+
+        if(lock.tryLock()){
+        try {
+            System.out.println(thread.getName()+"得到了锁");
+            for(int i = 0 ; i < 5 ; i++){
+                arrayList
+                        .add(i);
+                num++;
+                System.out.println(num);
+
+
+                }
+
+        }catch (Exception e){
+
+                e.printStackTrace();
+        }finally {
+            System.out.println(thread.getName()+"释放了锁");
+            lock.unlock();
         }
-    }
+        }
+        else {
+            System.out.println(thread.getName()+"获取锁失败");
+        }
+}
 }
