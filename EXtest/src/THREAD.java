@@ -21,12 +21,17 @@ public class THREAD {
 }
 class Thread extends java.lang.Thread{
     private String name;
-    public Thread(){
+    public Thread(Thread myThread){
 
     }
     public Thread(String name){
         this.name=name;
     }
+
+    public Thread() {
+
+    }
+
     public void run(){
         for(int i = 0 ; i < 30 ; i++){
             System.out.println("this has run" + name +"STRAT" + i);
