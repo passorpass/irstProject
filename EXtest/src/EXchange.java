@@ -8,7 +8,7 @@ public class EXchange {
         //将String转化为StringBuilder
         String str = sc.nextLine();
         sc.close();
-       /*
+      /*
         char[] chars = new char[100];
         for(int i = 0 ; i < str.length() ; i ++){
             chars[i] = str.charAt(i);
@@ -17,7 +17,7 @@ public class EXchange {
             System.out.print(chars[i]);
         }
 
-        */
+      */
 
         StringBuilder str1 = new StringBuilder(str);
         //进行结尾符号的定位
