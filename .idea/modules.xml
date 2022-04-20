@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/NEWwork/NEWwork.iml" filepath="$PROJECT_DIR$/NEWwork/NEWwork.iml" />
       <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/irstProject.iml" filepath="$PROJECT_DIR$/.idea/irstProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myHome/myHome.iml" filepath="$PROJECT_DIR$/myHome/myHome.iml" />
     </modules>
   </component>
 </project>

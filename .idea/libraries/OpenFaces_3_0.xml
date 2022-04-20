@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="OpenFaces-3.0" type="jsf-openfaces">
+    <properties version="3.0" />
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/myHome/lib/redistribution.txt" />
+      <root url="jar://$PROJECT_DIR$/myHome/lib/jfreechart.jar!/" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/openfaces-license.txt" />
+      <root url="jar://$PROJECT_DIR$/myHome/lib/sac.jar!/" />
+      <root url="jar://$PROJECT_DIR$/myHome/lib/jcommon.jar!/" />
+      <root url="jar://$PROJECT_DIR$/myHome/lib/openfaces.jar!/" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/commons-codec-1.3-license.txt" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/jdom-1.0-license.txt" />
+      <root url="jar://$PROJECT_DIR$/myHome/lib/cssparser.jar!/" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/cssparser-0.9.4-license.txt" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/dojo-license.txt" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/jfreechart-license.txt" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/myfaces-license.txt" />
+      <root url="file://$PROJECT_DIR$/myHome/lib/json-license.txt" />
+      <root url="jar://$PROJECT_DIR$/myHome/lib/commons-collections_2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
